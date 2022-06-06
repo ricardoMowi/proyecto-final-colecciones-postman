@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "e19eaa64-3397-496f-99b6-c4568e834630",
+		"_postman_id": "8ff116d8-6929-4fe0-b07a-a8e23c778097",
 		"name": "transaction-management/config-server",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "20912744"
+		"_exporter_id": "8129582"
 	},
 	"item": [
 		{
@@ -263,7 +263,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{transaction-api}}/transaction/createBootCoinTransaction?phoneOrigin=938748928&phoneDestination=931433035&amount=200.0&paymentMethod=TRANSFER_BY_YANKI",
+							"raw": "{{transaction-api}}/transaction/createBootCoinTransaction?phoneOrigin=932119666&phoneDestination=932119799&amount=200.0&paymentMethod=TRANSFER_BY_YANKI",
 							"host": [
 								"{{transaction-api}}"
 							],
@@ -274,11 +274,11 @@
 							"query": [
 								{
 									"key": "phoneOrigin",
-									"value": "938748928"
+									"value": "932119666"
 								},
 								{
 									"key": "phoneDestination",
-									"value": "931433035"
+									"value": "932119799"
 								},
 								{
 									"key": "amount",
