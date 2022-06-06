@@ -1,0 +1,398 @@
+{
+	"info": {
+		"_postman_id": "16445e44-4f1c-462e-a8bf-bbd6b15b12c2",
+		"name": "product-management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20912744"
+	},
+	"item": [
+		{
+			"name": "ProductController",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{product-api}}/product/all",
+							"host": [
+								"{{product-api}}"
+							],
+							"path": [
+								"product",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SetInactive",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{product-api}}/product/setInactive/627f072133c27e55410ef108",
+							"host": [
+								"{{product-api}}"
+							],
+							"path": [
+								"product",
+								"setInactive",
+								"627f072133c27e55410ef108"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n    {\r\n        \"id\": \"627f072133c27e55410ef108\",\r\n        \"customerId\": \"627eee309f54ec3e6a16a9f2\",\r\n        \"creationDate\": null,\r\n        \"transactionDate\": null,\r\n        \"maximumTransactionLimit\": 1,\r\n        \"numberOfFreeTransactions\": 0,\r\n        \"maintenanceCommission\": 0.0,\r\n        \"amount\": 1700.0,\r\n        \"productType\": \"CURRENT_ACCOUNT\",\r\n        \"status\": \"ACTIVE\",\r\n        \"owners\": null,\r\n        \"authorizedSigner\": null,\r\n        \"hasDebt\": null,\r\n        \"associatedAccounts\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product-api}}/product/update/627f072133c27e55410ef108",
+							"host": [
+								"{{product-api}}"
+							],
+							"path": [
+								"product",
+								"update",
+								"627f072133c27e55410ef108"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"customerId\": \"627eee309f54ec3e6a16a9f2\",\r\n        \"creationDate\": null,\r\n        \"transactionDate\": null,\r\n        \"maximumTransactionLimit\": 5,\r\n        \"numberOfFreeTransactions\": 6,\r\n        \"maintenanceCommission\": 3.0,\r\n        \"amount\": 2000.0,\r\n        \"productType\": \"CURRENT_ACCOUNT\",\r\n        \"status\": \"ACTIVE\",\r\n        \"owners\": null,\r\n        \"authorizedSigner\": null,\r\n        \"hasDebt\": null,\r\n        \"associatedAccounts\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product-api}}/product/createProduct",
+							"host": [
+								"{{product-api}}"
+							],
+							"path": [
+								"product",
+								"createProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateWallet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"customerId\": \"628fcd90674477ba7343f335\",\r\n        \"creationDate\": null,\r\n        \"transactionDate\": null,\r\n        \"maximumTransactionLimit\": 6,\r\n        \"numberOfFreeTransactions\": 3,\r\n        \"maintenanceCommission\": 5.0,\r\n        \"amount\": 100.0,\r\n        \"productType\": \"BUSINESS_CREDIT\",\r\n        \"status\": \"ACTIVE\",\r\n        \"owners\": null,\r\n        \"authorizedSigner\": null,\r\n\t\"hasDebt\": true,\r\n\t\"associatedAccounts\":null,\r\n\t\"identificationCode\":\"143324kjs2\",\r\n\t\"phoneNumber\": \"931765849\",\r\n\t\"IMEIPhone\": \"908765\",\r\n\t\"email\": \"email@gmail.com\",\r\n    \"amountBootCoin\": 5.0\r\n\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product-api}}/product/createWallet",
+							"host": [
+								"{{product-api}}"
+							],
+							"path": [
+								"product",
+								"createWallet"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CustomerController",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{product-api}}/client/all",
+							"host": [
+								"{{product-api}}"
+							],
+							"path": [
+								"client",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{product-api}}/client/getClient/628fcd90674477ba7343f335",
+							"host": [
+								"{{product-api}}"
+							],
+							"path": [
+								"client",
+								"getClient",
+								"628fcd90674477ba7343f335"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t  \r\n\t   \"clientType\": \"personal\",\r\n\t   \"name\":\"Cesar\",\r\n       \"last_name\":\"Solis\",\r\n\t   \"ruc\": \"ferrt65723\",\r\n\t   \"address\":\"Av. Arequipa 4532\",\r\n\t   \"email\":\"cs.fer@gmail.com\",\r\n\t   \"status\":\"active\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product-api}}/client/create",
+							"host": [
+								"{{product-api}}"
+							],
+							"path": [
+								"client",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t  \r\n\t   \"clientType\": \"personal\",\r\n\t   \"name\":\"Cesar \",\r\n       \t   \"last_name\":\"Solis Cardenas\",\r\n\t   \"ruc\": \"ferrt65723\",\r\n\t   \"address\":\"Av. Arequipa 4532\",\r\n\t   \"email\":\"cs.fer@gmail.com\",\r\n\t   \"status\":\"active\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product-api}}/client/update/629e1e5ab512f753064c9544",
+							"host": [
+								"{{product-api}}"
+							],
+							"path": [
+								"client",
+								"update",
+								"629e1e5ab512f753064c9544"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SetInactiveProduct",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{product-api}}/client/setInactive/628fcd90674477ba7343f335",
+							"host": [
+								"{{product-api}}"
+							],
+							"path": [
+								"client",
+								"setInactive",
+								"628fcd90674477ba7343f335"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MasterValueController",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{product-api}}/mastervalues/all",
+							"host": [
+								"{{product-api}}"
+							],
+							"path": [
+								"mastervalues",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{product-api}}/mastervalues/getClient/629d57b43e6d0a3ee37338c1",
+							"host": [
+								"{{product-api}}"
+							],
+							"path": [
+								"mastervalues",
+								"getClient",
+								"629d57b43e6d0a3ee37338c1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"creationDate\": null,\r\n        \"status\": \"ACTIVE\",\r\n        \"description\": \"Tasa de compra\",\r\n        \"code\": \"PURCHASE_RATE\",\r\n        \"value\": 6.5,\r\n        \"masterType\": \"RATE\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product-api}}/mastervalues/create",
+							"host": [
+								"{{product-api}}"
+							],
+							"path": [
+								"mastervalues",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"creationDate\": null,\r\n        \"status\": \"ACTIVE\",\r\n        \"description\": \"Tasa de compra\",\r\n        \"code\": \"PURCHASE_RATE\",\r\n        \"value\": 7.5,\r\n        \"masterType\": \"RATE\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product-api}}/mastervalues/update/629d57b43e6d0a3ee37338c1",
+							"host": [
+								"{{product-api}}"
+							],
+							"path": [
+								"mastervalues",
+								"update",
+								"629d57b43e6d0a3ee37338c1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SetInactive",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{product-api}}/mastervalues/setInactive/629d57b43e6d0a3ee37338c1",
+							"host": [
+								"{{product-api}}"
+							],
+							"path": [
+								"mastervalues",
+								"setInactive",
+								"629d57b43e6d0a3ee37338c1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "product-api",
+			"value": "http://localhost:8022",
+			"type": "string"
+		},
+		{
+			"key": "default",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

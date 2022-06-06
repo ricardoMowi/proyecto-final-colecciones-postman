@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "d8ed3564-5840-4620-ae4c-2f46edcc3e40",
+		"name": "consult-management/config-server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20912744"
+	},
+	"item": [
+		{
+			"name": "ReportProductsByCustomer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{consult-api}}/consults/reportProductsByCustomer/628fcd90674477ba7343f335",
+					"host": [
+						"{{consult-api}}"
+					],
+					"path": [
+						"consults",
+						"reportProductsByCustomer",
+						"628fcd90674477ba7343f335"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReportByProductDate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{consult-api}}/consults/reportByProductandDateRange?id=627f072133c27e55410ef108&startDate=20-10-2021&endDate=26-10-2021",
+					"host": [
+						"{{consult-api}}"
+					],
+					"path": [
+						"consults",
+						"reportByProductandDateRange"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "627f072133c27e55410ef108"
+						},
+						{
+							"key": "startDate",
+							"value": "20-10-2021"
+						},
+						{
+							"key": "endDate",
+							"value": "26-10-2021"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReportLastTransaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{consult-api}}/consults/reportLastTentransactions/627f072133c27e55410ef108",
+					"host": [
+						"{{consult-api}}"
+					],
+					"path": [
+						"consults",
+						"reportLastTentransactions",
+						"627f072133c27e55410ef108"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BalanceByDebitCard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{consult-api}}/consults/balanceByDebitCard/627f072133c27e55410ef108",
+					"host": [
+						"{{consult-api}}"
+					],
+					"path": [
+						"consults",
+						"balanceByDebitCard",
+						"627f072133c27e55410ef108"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "consult-api",
+			"value": "http://localhost:8093",
+			"type": "string"
+		},
+		{
+			"key": "default",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

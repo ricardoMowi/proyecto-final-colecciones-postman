@@ -1,0 +1,392 @@
+{
+	"info": {
+		"_postman_id": "e19eaa64-3397-496f-99b6-c4568e834630",
+		"name": "transaction-management/config-server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20912744"
+	},
+	"item": [
+		{
+			"name": "ProductController",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{transaction-api}}/product/getAll",
+							"host": [
+								"{{transaction-api}}"
+							],
+							"path": [
+								"product",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{transaction-api}}/product/getById/627d9709a0169616d9662bf3",
+							"host": [
+								"{{transaction-api}}"
+							],
+							"path": [
+								"product",
+								"getById",
+								"627d9709a0169616d9662bf3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"id\":\"mugugj2134\",\r\n        \"customerId\": \"627eee309f54ec3e6a16a9f2\",\r\n        \"creationDate\": null,\r\n        \"transactionDate\": null,\r\n        \"maximumTransactionLimit\": 6,\r\n        \"numberOfFreeTransactions\": 3,\r\n        \"maintenanceCommission\": 5.0,\r\n        \"amount\": 100.0,\r\n        \"productType\": \"BUSINESS_CREDIT\",\r\n        \"status\": \"ACTIVE\",\r\n        \"owners\": null,\r\n        \"authorizedSigner\": null,\r\n\t\"hasDebt\": true,\r\n\t\"associatedAccounts\":null,\r\n\t\"identificationCode\":\"143324kjs2\",\r\n\t\"phoneNumber\": \"931765849\",\r\n\t\"IMEIPhone\": \"908765\",\r\n\t\"email\": \"email@gmail.com\"\r\n\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{transaction-api}}/product/save",
+							"host": [
+								"{{transaction-api}}"
+							],
+							"path": [
+								"product",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id\": \"627d9709a0169616d9662bf3\",\r\n        \"customerId\": null,\r\n        \"creationDate\": null,\r\n        \"transactionDate\": null,\r\n        \"maximumTransactionLimit\": 0,\r\n        \"numberOfFreeTransactions\": 5.0,\r\n        \"maintenanceCommission\": null,\r\n        \"amount\": 100.0,\r\n        \"productType\": null,\r\n        \"status\": \"ACTIVE\",\r\n        \"owners\": null,\r\n        \"authorizedSigner\": null,\r\n        \"hasDebt\": null,\r\n        \"associatedAccounts\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{transaction-api}}/product/update/627d9709a0169616d9662bf3",
+							"host": [
+								"{{transaction-api}}"
+							],
+							"path": [
+								"product",
+								"update",
+								"627d9709a0169616d9662bf3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{transaction-api}}/product/delete/627d9709a0169616d9662bf3",
+							"host": [
+								"{{transaction-api}}"
+							],
+							"path": [
+								"product",
+								"delete",
+								"627d9709a0169616d9662bf3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TransactionController",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{transaction-api}}/transaction/getAll",
+							"host": [
+								"{{transaction-api}}"
+							],
+							"path": [
+								"transaction",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{transaction-api}}/transaction/getById/62829c4c5aa8681fd572b1fa",
+							"host": [
+								"{{transaction-api}}"
+							],
+							"path": [
+								"transaction",
+								"getById",
+								"62829c4c5aa8681fd572b1fa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id\": \"62829c4c5aa8681fd572fdsg\",\r\n        \"registerDate\": null,\r\n        \"idProduct\": \"628296562738d249c56a5fe6\",\r\n        \"amount\": 700.0,\r\n        \"transactionCommission\": null,\r\n        \"flagWithCommission\": false,\r\n        \"idDestinationProduct\": null,\r\n        \"transactionType\": \"DEPOSIT\",\r\n        \"status\": null,\r\n        \"newDailyBalance\": null,\r\n        \"idCustomer\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{transaction-api}}/transaction/save",
+							"host": [
+								"{{transaction-api}}"
+							],
+							"path": [
+								"transaction",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createTransaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"registerDate\": null,\r\n        \"idProduct\": \"628296562738d249c56a5fe6\",\r\n        \"amount\": 500.0,\r\n        \"transactionCommission\": null,\r\n        \"flagWithCommission\": false,\r\n        \"idDestinationProduct\": null,\r\n        \"transactionType\": \"DEPOSIT\",\r\n        \"status\": null,\r\n        \"newDailyBalance\": null,\r\n        \"idCustomer\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{transaction-api}}/transaction/createTransaction",
+							"host": [
+								"{{transaction-api}}"
+							],
+							"path": [
+								"transaction",
+								"createTransaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createWalletTransaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{transaction-api}}/transaction/createEWalletTransaction?phoneOrigin=938748928&phoneDestination=931433035&amount=200.0",
+							"host": [
+								"{{transaction-api}}"
+							],
+							"path": [
+								"transaction",
+								"createEWalletTransaction"
+							],
+							"query": [
+								{
+									"key": "phoneOrigin",
+									"value": "938748928"
+								},
+								{
+									"key": "phoneDestination",
+									"value": "931433035"
+								},
+								{
+									"key": "amount",
+									"value": "200.0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BootcoinTransaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{transaction-api}}/transaction/createBootCoinTransaction?phoneOrigin=938748928&phoneDestination=931433035&amount=200.0&paymentMethod=TRANSFER_BY_YANKI",
+							"host": [
+								"{{transaction-api}}"
+							],
+							"path": [
+								"transaction",
+								"createBootCoinTransaction"
+							],
+							"query": [
+								{
+									"key": "phoneOrigin",
+									"value": "938748928"
+								},
+								{
+									"key": "phoneDestination",
+									"value": "931433035"
+								},
+								{
+									"key": "amount",
+									"value": "200.0"
+								},
+								{
+									"key": "paymentMethod",
+									"value": "TRANSFER_BY_YANKI"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id\": \"6282700c72fe9c149516b11f\",\r\n        \"registerDate\": null,\r\n        \"idProduct\": \"628261adf58fc40131acebaa\",\r\n        \"amount\": 400.0,\r\n        \"transactionCommission\": null,\r\n        \"flagWithCommission\": false,\r\n        \"idDestinationProduct\": null,\r\n        \"transactionType\": \"DEPOSIT\",\r\n        \"status\": null,\r\n        \"newDailyBalance\": null,\r\n        \"idCustomer\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{transaction-api}}/transaction/update/6282700c72fe9c149516b11f",
+							"host": [
+								"{{transaction-api}}"
+							],
+							"path": [
+								"transaction",
+								"update",
+								"6282700c72fe9c149516b11f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{transaction-api}}/transaction/delete/6282700c72fe9c149516b11f",
+							"host": [
+								"{{transaction-api}}"
+							],
+							"path": [
+								"transaction",
+								"delete",
+								"6282700c72fe9c149516b11f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "transaction-api",
+			"value": "http://localhost:8023",
+			"type": "string"
+		},
+		{
+			"key": "default",
+			"value": "http://localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "gateway-api",
+			"value": "http://localhost:8090",
+			"type": "string"
+		}
+	]
+}

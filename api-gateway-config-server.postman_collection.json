@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "5bd208a5-579d-4203-b02f-36914461e1db",
+		"name": "api-gateway/config-server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20912744"
+	},
+	"item": [
+		{
+			"name": "product-management-api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{gateway-api}}/product/client/all",
+					"host": [
+						"{{gateway-api}}"
+					],
+					"path": [
+						"product",
+						"client",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transaction-management-api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{gateway-api}}/transaction/product/getAll",
+					"host": [
+						"{{gateway-api}}"
+					],
+					"path": [
+						"transaction",
+						"product",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consult-management-api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{gateway-api}}/consults/consults/reportProductsByCustomer?id=628fcd90674477ba7343f335",
+					"host": [
+						"{{gateway-api}}"
+					],
+					"path": [
+						"consults",
+						"consults",
+						"reportProductsByCustomer"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "628fcd90674477ba7343f335"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "gateway-api",
+			"value": "http://localhost:8090",
+			"type": "string"
+		}
+	]
+}
