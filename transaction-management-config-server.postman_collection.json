@@ -263,7 +263,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{transaction-api}}/transaction/createBootCoinTransaction?phoneOrigin=932119666&phoneDestination=932119799&amount=200.0&paymentMethod=TRANSFER_BY_YANKI",
+							"raw": "{{transaction-api}}/transaction/createBootCoinTransaction?origin=932119666&destination=932119799&amount=2&paymentMethod=TRANSFER_BY_YANKI",
 							"host": [
 								"{{transaction-api}}"
 							],
@@ -273,16 +273,16 @@
 							],
 							"query": [
 								{
-									"key": "phoneOrigin",
+									"key": "origin",
 									"value": "932119666"
 								},
 								{
-									"key": "phoneDestination",
+									"key": "destination",
 									"value": "932119799"
 								},
 								{
 									"key": "amount",
-									"value": "200.0"
+									"value": "2"
 								},
 								{
 									"key": "paymentMethod",
